@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Virtual AI Assistant</title>
+    <link rel="shortcut icon" href="img/title.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans&family=Mukta&family=Poppins&family=Protest+Revolution&family=Raleway:wght@100;200&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik+Doodle+Shadow&family=Source+Code+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Grenze+Gotisch:wght@100..900&family=Gurajada&family=Josefin+Sans&family=Mukta&family=Poppins&family=Protest+Revolution&family=Raleway:wght@100;200&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik+Doodle+Shadow&family=Source+Code+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Barriecito&family=Charmonman:wght@400;700&family=Grenze+Gotisch:wght@100..900&family=Gurajada&family=Josefin+Sans&family=Mukta&family=Poppins&family=Protest+Revolution&family=Raleway:wght@100;200&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik+Doodle+Shadow&family=Shalimar&family=Source+Code+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Barriecito&family=Charmonman:wght@400;700&family=Gemunu+Libre:wght@200..800&family=Grenze+Gotisch:wght@100..900&family=Gurajada&family=Josefin+Sans&family=Mukta&family=Poppins&family=Protest+Revolution&family=Raleway:wght@100;200&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik+Doodle+Shadow&family=Shalimar&family=Source+Code+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Barriecito&family=Charmonman:wght@400;700&family=Gemunu+Libre:wght@200..800&family=Grenze+Gotisch:wght@100..900&family=Gurajada&family=Josefin+Sans&family=Major+Mono+Display&family=Mukta&family=Poppins&family=Protest+Revolution&family=Raleway:wght@100;200&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik+Doodle+Shadow&family=Shalimar&family=Source+Code+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <audio src="./Technology sounds/mixkit-technology-computer-calculations-3122.wav" id="mic_sound"
+        preload="auto"></audio>
+
+    <div class="body blur">
+        <!-- left section -->
+        <div class="left-sec section">
+            <!-- weather details -->
+            <div class="left-top">
+                <div class="weather_details">
+                    <p id="weather_description">--- description ---</p>
+                    <p id="weather_temperature">--- temperature ---</p>
+                    <p id="weather_feels_like">--- feels like ---</p>
+                    <p id="max_temp">--- max temperature ---</p>
+                    <p id="min_temp">--- min temperature ---</p>
+                    <p id="atm_pressure">--- atmospheric pressure ---</p>
+                    <p id="weather_humidity">--- humidity ---</p>
+                    <p id="wind_speed">--- wind speed ---</p>
+                    <div class="weather_div"></div>
+                </div>
+                <div class="weather_img">
+                    <p id="country">--- country ---</p>
+                    <h2 id="weather_location">--- location ---</h2>
+                    <p id="weather_image"><i class="fa-solid fa-earth-americas"></i></p>
+                    <section class="weather_input">
+                        <input type="text" placeholder="Enter City Name..." id="city_input">
+                        <button id="weather_check">Check</button>
+                    </section>
+                </div>
+            </div>
+
+            <div class="left-mid">
+                <section class="time-sec">
+                    <div class="clock cont">
+                        <i class="fa-regular fa-clock icon"></i>
+                        <p id="time">------</p>
+                    </div>
+                    <div class="internet cont">
+                        <span id="netStatus"></span>
+                        <p id="internet">Online</p>
+                    </div>
+                    <div class="battery cont">
+                        <span id="charging-status"></span>
+                        <p id="battery">100%</p>
+                    </div>
+                </section>
+                <section class="time-sec">
+                    <img src="./gif/iron_man.gif" class="iron-section" id="jarvisSpeetch">
+                </section>
+            </div>
+
+            <div class="left-lower">
+                <div class="lower low1">
+                    <b style="color: #00c2cc;"><i class="fa-regular fa-newspaper"></i> Current News</b>
+                    <p id="current_News">News</p>
+                </div>
+                <div class="lower low2">
+                    <i class="fa-solid fa-upload" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-copy" onclick="tabSound(), toggle()"></i>
+                    <i class="fa-solid fa-circle-dollar-to-slot" onclick="tabSound()"></i>
+                    <!-- <i class="fa-regular fa-clipboard" onclick="tabSound()"></i>
+                    <i class="fa-brands fa-searchengin" onclick="tabSound()"></i> -->
+                    <i class="fa-solid fa-circle-half-stroke" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-microphone-lines" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-images" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-video" onclick="tabSound()"></i>
+                    <i class="fa-regular fa-circle-user" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-share-from-square" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-gear" onclick="tabSound()"></i>
+                    <i class="fa-solid fa-power-off" onclick="tabSound()"></i>
+                    <button class="stop_Speech">Stop Speech</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- middle section -->
+        <div class="mid-sec section">
+            <div class="date_time">
+                <p id="mid_dateTime">Date & Time</p>
+            </div>
+            <div class="input">
+                <section class="mid-sec">
+                    <h2 class="content" id="output"></h2>
+                    <div class="talk" id="startRecording" onclick="activateMIC()"><i class="fa-solid fa-microphone"></i></div>
+                </section>
+            </div>
+            <div id="text-box" class="scroll-container"></div>
+            <div>
+                <img src="./gif/music-wave.gif" class="mid-gif">
+            </div>
+        </div>
+        <!-- right section -->
+        <div class="right-sec section">
+            <div class="message_area">
+                <ul class="chatbox">
+                    <li class="chat incoming">
+                        <i class="fa-solid fa-robot"></i>
+                        <p>Hi, there <br>How can I help You?</p>
+                    </li>
+                    <!-- <li class="chat outgoing">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium?</p>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="input-sec">
+                <input type="text" class="message-input" placeholder="Type Something">
+                <button type="submit" id="sendMsg"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+        </div>
+
+    </div>
+    <!-- command tab -->
+    <div class="command_tab popup">
+        <a href="#" onclick="toggle()"><i class="fa-solid fa-xmark"></i></a>
+        <!-- contents -->
+        <div class="com_tab_heading">
+            <img src="./gif/heart.gif" alt="">
+            <h1>J.A.R.V.I.S Commands</h1>
+        </div>
+
+        <div class="commands">
+            <div class="normal_command">
+                <h2>Custom Commands</h2>
+                <ul class="command">
+                    <br><br>
+                    <li>Hello Jarvis</li>
+                    <li>How are You</li>
+                    <li>Hold on Jarvis</li>
+                    <li>Tell me about Yourself , Describe Yourself</li>
+                    <li>I Love You</li>
+                    <li>I am not talking to you Jarvis</li>
+                    <li>Tell me the Time Jarvis</li>
+                    <li>Tell me the Date Jarvis</li>
+                    <li>Open Google, YouTube, Facebook, Instagram</li>
+                    <li>Open Calculator, Whatsapp</li>
+                    <li>What are your Commands</li>
+                    <li>Add Commands <i class="fa-solid fa-plus"></i></li>
+                </ul>
+            </div>
+            <div class="api_command">
+                <h2>Normal Commands</h2>
+                <ul class="command">
+                    <br><br>
+                    <li>Tell me a Joke , Tell me another Joke</li>
+                    <li>Tell me a Small Story</li>
+                    <li>Tell me the Weather details , Todays Weather</li>
+                    <li>Search image , Generate Images</li>
+                    <li>Generate Password for me</li>
+                    <li>Generate a Quote</li>
+                    <li>Generate a User Card</li>
+                    <li>Tell me a Recipe</li>
+                    <li>Show Memes</li>
+                    <li>Convert the Currency</li>
+                    <li>Predict gender by Name</li>
+                    <li>Tell me the current News</li>
+                    <li>Add Commands <i class="fa-solid fa-plus"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- script files -->
+    <script src="jarvis.js"></script>
+    <script src="./weather.js"></script>
+    <script src="./systemInfo.js"></script>
+    <script src="./news.js"></script>
+    <script src="./message.js" defer></script>
+    <script src="./tab.js"></script>
+    <script src="https://kit.fontawesome.com/fa3dd976de.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
