@@ -55,7 +55,7 @@ let getJoke = () => {
 // weather api function
 const weather = () => {
   const city = "Kolkata";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c6b4334ffe3820b3495fc11608e946d5`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=apikey`;
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -103,7 +103,7 @@ recognition.onresult = function (event) {
   content.textContent = capturedText; // Display captured text
   // takeCommand(capturedText);
 
-  const API_KEY = "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";
+  const API_KEY = "apikey";
   const API_URL = "https://api.openai.com/v1/chat/completions";
 
   const requestOptions = {
