@@ -15,7 +15,7 @@ document.getElementById("weather_check").addEventListener("click", function () {
   const wind_speed = document.getElementById("wind_speed");
 
   const city = city_input || "Kolkata";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c6b4334ffe3820b3495fc11608e946d5`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=apikey`;
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -74,7 +74,7 @@ document.getElementById("weather_check").addEventListener("click", function () {
 
 // news api fetch
 // const News_apiUrl =
-//   "https://newsapi.org/v2/top-headlines?country=us&apiKey=d23b7624ddb641bf9a51ed226d7b7d2d";
+//   "https://newsapi.org/v2/top-headlines?country=us&apiKey=apikey";
 
 // fetch(News_apiUrl)
 //   .then((response) => {
