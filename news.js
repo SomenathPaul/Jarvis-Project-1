@@ -1,5 +1,5 @@
 const News_apiUrl =
-  "https://newsapi.org/v2/top-headlines?country=us&apiKey=d23b7624ddb641bf9a51ed226d7b7d2d";
+  "https://newsapi.org/v2/top-headlines?country=us&apiKey=apikey";
 
 fetch(News_apiUrl)
   .then((response) => {
